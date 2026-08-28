@@ -738,8 +738,131 @@ a {
  
     text-align: center; 
 } 
- 
- 
+ /* ==================================================
+   MANDATORY DISCLOSURE SECTION
+================================================== */
+
+.mandatory-disclosure-section {
+    padding: 80px 8%;
+    background: #f8f9fc;
+}
+
+.mandatory-disclosure-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.mandatory-disclosure-card {
+    width: 100%;
+    max-width: 650px;
+    background: #ffffff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.mandatory-disclosure-card h3 {
+    margin: 15px 0;
+    font-size: 24px;
+}
+
+.mandatory-disclosure-card p {
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+/* ==================================================
+   MANDATORY DISCLOSURE
+================================================== */
+
+.mandatory-disclosure-section {
+    padding: 80px 6%;
+    background: #f8f9fc;
+}
+
+.mandatory-disclosure-content {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.disclosure-block {
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.disclosure-block h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.disclosure-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.disclosure-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.disclosure-table th,
+.disclosure-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.5;
+}
+
+.disclosure-table th {
+    font-weight: 600;
+}
+
+.disclosure-table th:first-child,
+.disclosure-table td:first-child {
+    width: 80px;
+    text-align: center;
+}
+
+.disclosure-table th:nth-child(2),
+.disclosure-table td:nth-child(2) {
+    width: 45%;
+}
+
+.disclosure-table th:last-child,
+.disclosure-table td:last-child {
+    width: 35%;
+}
+
+.disclosure-table a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.disclosure-table a:hover {
+    text-decoration: underline;
+}
+ /* ==================================================
+   MANDATORY DISCLOSURE PDF BUTTON
+================================================== */
+
+.view-pdf-btn {
+    display: inline-block;
+    padding: 8px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.view-pdf-btn:hover {
+    transform: translateY(-2px);
+}
 /* ================================================== 
    EXTRA CURRICULAR & ACTIVITIES 
 ================================================== */ 
