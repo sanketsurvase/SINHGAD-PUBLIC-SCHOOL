@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admission | Sinhgad Public School Korti</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+        /* ==================================================
+           ADMISSION PAGE
+        ================================================== */
+
+        .admission-page {
+            background: #f7f9fc;
+            min-height: 100vh;
+        }
+
+
+        /* ==================================================
+           PAGE HEADER
+        ================================================== */
+
+        .admission-hero {
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(18, 60, 105, 0.96),
+                    rgba(18, 60, 105, 0.82)
+                ),
+                url("images/school.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            padding: 80px 8%;
+
+            text-align: center;
+
+            color: white;
+        }
+
+        .admission-hero p {
+            color: #f5b942;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 10px;
+        }
+
+        .admission-hero h1 {
+            font-size: 42px;
+
+            margin-bottom: 10px;
+        }
+
+        .admission-hero span {
+            color: #dce5ef;
+
+            font-size: 16px;
+        }
+
+
+        /* ==================================================
+           BACK BUTTON
+        ================================================== */
+
+        .back-home-container {
+            max-width: 1200px;
+
+            margin: 30px auto 0;
+
+            padding: 0 8%;
+        }
+
+        .back-home-btn {
+            display: inline-block;
+
+            background: #123c69;
+
+            color: white;
+
+            padding: 10px 20px;
+
+            border-radius: 6px;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+        .back-home-btn:hover {
+            background: #f39c12;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ==================================================
+           MAIN CONTENT
+        ================================================== */
+
+        .admission-main {
+            max-width: 1200px;
+
+            margin: 40px auto 80px;
+
+            padding: 0 8%;
+        }
+
+
+        /* ==================================================
+           ADMISSION CARDS
+        ================================================== */
+
+        .admission-card {
+            background: #ffffff;
+
+            padding: 35px;
+
+            margin-bottom: 30px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .admission-card h2 {
+            color: #123c69;
+
+            font-size: 25px;
+
+            margin-bottom: 18px;
+        }
+
+        .admission-card h3 {
+            color: #123c69;
+
+            font-size: 20px;
+
+            margin-bottom: 15px;
+        }
+
+        .admission-card p {
+            color: #666;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* ==================================================
+           ADMISSION AGE TABLE
+        ================================================== */
+
+        .table-wrapper {
+            width: 100%;
+
+            overflow-x: auto;
+
+            margin-top: 20px;
+        }
+
+        .admission-table {
+            width: 100%;
+
+            min-width: 600px;
+
+            border-collapse: collapse;
+        }
+
+        .admission-table th,
+        .admission-table td {
+            border: 1px solid #ddd;
+
+            padding: 14px;
+
+            text-align: center;
+
+            font-size: 14px;
+        }
+
+        .admission-table th {
+            background: #123c69;
+
+            color: white;
+
+            font-weight: 600;
+        }
+
+        .admission-table td {
+            color: #555;
+
+            background: white;
+        }
+
+        .admission-table tr:hover td {
+            background: #f7f9fc;
+        }
+
+
+        /* ==================================================
+           DOCUMENTS
+        ================================================== */
+
+        .document-box {
+            background: #f7f9fc;
+
+            border-left: 4px solid #f39c12;
+
+            padding: 20px;
+
+            margin-top: 18px;
+
+            border-radius: 6px;
+        }
+
+        .document-box h4 {
+            color: #123c69;
+
+            font-size: 16px;
+
+            margin-bottom: 7px;
+        }
+
+        .document-box p {
+            margin-bottom: 0;
+        }
+
+
+        /* ==================================================
+           INFORMATION GRID
+        ================================================== */
+
+        .information-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+            margin-top: 25px;
+        }
+
+        .information-box {
+            background: #f7f9fc;
+
+            padding: 25px;
+
+            border-radius: 8px;
+
+            border-top: 4px solid #f39c12;
+
+            text-align: center;
+        }
+
+        .information-icon {
+            font-size: 32px;
+
+            margin-bottom: 10px;
+        }
+
+        .information-box h4 {
+            color: #123c69;
+
+            font-size: 16px;
+
+            margin-bottom: 5px;
+        }
+
+        .information-box p {
+            margin-bottom: 0;
+
+            font-size: 14px;
+        }
+
+
+        /* ==================================================
+           MORE DETAILS
+        ================================================== */
+
+        .more-details {
+            text-align: center;
+        }
+
+        .more-details > p {
+            max-width: 750px;
+
+            margin: 0 auto 30px;
+        }
+
+
+        /* ==================================================
+           THREE PDF BUTTONS
+        ================================================== */
+
+        .pdf-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+            margin-top: 30px;
+        }
+
+        .pdf-button {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            background: #123c69;
+
+            color: white;
+
+            padding: 16px 20px;
+
+            border-radius: 7px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .pdf-button:hover {
+            background: #f39c12;
+
+            color: white;
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 8px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        .pdf-icon {
+            font-size: 20px;
+        }
+
+
+        /* ==================================================
+           CONTACT / ENQUIRY
+        ================================================== */
+
+        .admission-enquiry {
+            background: #123c69;
+
+            color: white;
+
+            padding: 45px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            margin-top: 30px;
+        }
+
+        .admission-enquiry h2 {
+            color: white;
+
+            margin-bottom: 10px;
+        }
+
+        .admission-enquiry p {
+            color: #dce5ef;
+
+            margin-bottom: 25px;
+        }
+
+        .enquiry-btn {
+            display: inline-block;
+
+            background: #f39c12;
+
+            color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 6px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .enquiry-btn:hover {
+            background: #d98200;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ==================================================
+           FOOTER
+        ================================================== */
+
+        .admission-footer {
+            background: #0c2947;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            font-size: 13px;
+        }
+
+        .admission-footer p {
+            color: #aebdcc;
+        }
+
+
+        /* ==================================================
+           RESPONSIVE
+        ================================================== */
+
+        @media (max-width: 900px) {
+
+            .information-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pdf-container {
+                grid-template-columns: 1fr;
+            }
+
+            .admission-hero h1 {
+                font-size: 34px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .admission-hero {
+                padding: 60px 5%;
+            }
+
+            .admission-hero h1 {
+                font-size: 30px;
+            }
+
+            .admission-main {
+                padding: 0 5%;
+            }
+
+            .admission-card {
+                padding: 25px 20px;
+            }
+
+            .admission-card h2 {
+                font-size: 22px;
+            }
+
+            .admission-table {
+                min-width: 550px;
+            }
+
+            .back-home-container {
+                padding: 0 5%;
+            }
+
+            .admission-enquiry {
+                padding: 30px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     ADMISSION PAGE
+================================================== -->
+
+<div class="admission-page">
+
+
+    <!-- ==================================================
+         HERO
+    ================================================== -->
+
+    <section class="admission-hero">
+
+        <p>ADMISSIONS</p>
+
+        <h1>Admission Information</h1>
+
+        <span>
+            Sinhgad Public School Korti, Pandharpur
+        </span>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         BACK TO HOME
+    ================================================== -->
+
+    <div class="back-home-container">
+
+        <a href="index.html"
+           class="back-home-btn">
+
+            ← Back to Home
+
+        </a>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         MAIN ADMISSION CONTENT
+    ================================================== -->
+
+    <main class="admission-main">
+
+
+        <!-- ==================================================
+             ADMISSION PROCESS
+        ================================================== -->
+
+        <section class="admission-card">
+
+            <h2>
+                Admission Process
+            </h2>
+
+            <p>
+                Sale of prospectus begins in the month of December.
+                The Prospectus contains the application form.
+                The application form must be correctly filled with
+                a latest photograph of the child.
+            </p>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             ADMISSION AGE
+        ================================================== -->
+
+        <section class="admission-card">
+
+            <h2>
+                Admission Age for A.Y. 2026-27
+            </h2>
+
+            <div class="table-wrapper">
+
+                <table class="admission-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Sr. No.
+                            </th>
+
+                            <th>
+                                Standard
+                            </th>
+
+                            <th>
+                                Max Date & Age
+                            </th>
+
+                            <th>
+                                Min DOB & Age
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>1</td>
+
+                            <td>I</td>
+
+                            <td>01-07-19</td>
+
+                            <td>16-01-21</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>2</td>
+
+                            <td>Senior KG</td>
+
+                            <td>01-07-20</td>
+
+                            <td>16-01-22</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>3</td>
+
+                            <td>Junior KG</td>
+
+                            <td>01-07-21</td>
+
+                            <td>16-01-23</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>4</td>
+
+                            <td>Mini KG</td>
+
+                            <td>01-07-22</td>
+
+                            <td>16-01-24</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             PRE PRIMARY
+        ================================================== -->
+
+        <section class="admission-card">
+
+            <h2>
+                Pre – Primary Section
+            </h2>
+
+            <p>
+                Every child seeking admission should visit the school
+                in person. The admission of the child would be determined
+                on the basis of the observations during his school visit.
+            </p>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             PRIMARY & SECONDARY
+        ================================================== -->
+
+        <section class="admission-card">
+
+            <h2>
+                Primary and Secondary Section
+            </h2>
+
+            <p>
+                Students would be admitted on the basis of the performance
+                in the written test and personal interview. The decision
+                of the Principal is final regarding the admission.
+            </p>
+
+            <p>
+                Admission will be confirmed after completion of the
+                necessary office procedure and payment of the fees.
+            </p>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             DOCUMENTS
+        ================================================== -->
+
+        <section class="admission-card">
+
+            <h2>
+                Documents to be Submitted
+            </h2>
+
+
+            <div class="document-box">
+
+                <h4>
+                    Pre-primary Section
+                </h4>
+
+                <p>
+                    The original Birth Certificate.
+                </p>
+
+            </div>
+
+
+            <div class="document-box">
+
+                <h4>
+                    Std. I to IX
+                </h4>
+
+                <p>
+                    The School leaving certificate from the last
+                    school attended.
+                </p>
+
+                <p>
+                    Progress report of the last qualifying examination.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             ACADEMIC / ADMISSION PERIOD
+        ================================================== -->
+
+        <section class="admission-card">
+
+            <h2>
+                Academic & Admission Information
+            </h2>
+
+
+            <div class="information-grid">
+
+
+                <div class="information-box">
+
+                    <div class="information-icon">
+                        📚
+                    </div>
+
+                    <h4>
+                        Academic Session
+                    </h4>
+
+                    <p>
+                        April to March
+                    </p>
+
+                </div>
+
+
+                <div class="information-box">
+
+                    <div class="information-icon">
+                        📝
+                    </div>
+
+                    <h4>
+                        Admission Period
+                    </h4>
+
+                    <p>
+                        January to June
+                    </p>
+
+                </div>
+
+
+                <div class="information-box">
+
+                    <div class="information-icon">
+                        ☀️
+                    </div>
+
+                    <h4>
+                        Vacation Period
+                    </h4>
+
+                    <p>
+                        1st May to 31st May
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             MORE DETAILS
+        ================================================== -->
+
+        <section class="admission-card more-details">
+
+            <h2>
+                More Details
+            </h2>
+
+            <p>
+                For more detailed information regarding admissions,
+                application procedures and other important guidelines,
+                please refer to the documents below.
+            </p>
+
+
+            <div class="pdf-container">
+
+
+                <!-- PDF 1 -->
+
+                <a href="pdf/Transport Details.pdf"
+                   target="_blank"
+                   class="pdf-button">
+
+                    <span class="pdf-icon">
+                        📄
+                    </span>
+
+                    <span>
+                        Transport Details 
+                    </span>
+
+                </a>
+
+
+
+                <!-- PDF 2 -->
+
+                <a href="pdf/STUDENT STRENGTH DETAILS.pdf"
+                   target="_blank"
+                   class="pdf-button">
+
+                    <span class="pdf-icon">
+                        📋
+                    </span>
+
+                    <span>
+                        Student Strength
+                    </span>
+
+                </a>
+
+
+
+                <!-- PDF 3 -->
+
+                <a href="pdf/Fees.pdf"
+                   target="_blank"
+                   class="pdf-button">
+
+                    <span class="pdf-icon">
+                        📑
+                    </span>
+
+                    <span>
+                        Details of Fees 
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             ENQUIRY
+        ================================================== -->
+
+        <section class="admission-enquiry">
+
+            <h2>
+                Need More Information?
+            </h2>
+
+            <p>
+                Contact the school office for admission-related
+                queries and further information.
+            </p>
+
+            <a href="index.html#contact"
+               class="enquiry-btn">
+
+                Contact School →
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="admission-footer">
+
+        <p>
+            © 2026 Sinhgad Public School Korti, Pandharpur.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</div>
+
+
+</body>
+
+</html>
+

@@ -1,90 +1,29 @@
-/* ================================================== 
-   GENERAL 
-================================================== */ 
- 
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-} 
- 
-html { 
-    scroll-behavior: smooth; 
-    scroll-padding-top: 90px; 
-} 
- 
-body { 
-    font-family: 'Poppins', sans-serif; 
-    background: #f7f9fc; 
-    color: #222; 
-    line-height: 1.6; 
-} 
- 
-a { 
-    text-decoration: none; 
-} 
- 
- 
-/* ================================================== 
-   HEADER / MAIN NAVIGATION 
-================================================== */ 
- 
-.header { 
-    width: 100%; 
-    height: 85px; 
- 
-    background: #ffffff; 
- 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
- 
-    padding: 0 6%; 
- 
-    position: sticky; 
-    top: 0; 
- 
-    z-index: 1000; 
- 
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); 
-} 
- 
- 
-/* Logo */ 
- 
-.logo-area { 
-    display: flex; 
-    align-items: center; 
-    gap: 12px; 
-} 
- 
-.logo-circle { 
-    width: 52px; 
-    height: 52px; 
- 
-    border-radius: 50%; 
- 
-    background: #123c69; 
-    color: white; 
- 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
- 
-    font-weight: 700; 
-    font-size: 15px; 
-} 
- 
-.school-name h2 { 
-    font-size: 18px; 
-    color: #123c69; 
-    line-height: 1.2; 
-} 
- 
-.school-name p { 
-    font-size: 13px; 
-    color: #777; 
-} 
+/* ==================================================
+   GENERAL
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f9fc;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
 .school-info,
 .school-info li {
     font-family: inherit;
@@ -92,26 +31,85 @@ a {
     font-weight: inherit;
     line-height: inherit;
 }
- 
- 
+
+
+/* ==================================================
+   HEADER / MAIN NAVIGATION
+================================================== */
+
+.header {
+    width: 100%;
+    min-height: 85px;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Logo */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-circle {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: #123c69;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.school-name h2 {
+    font-size: 18px;
+    color: #123c69;
+    line-height: 1.2;
+}
+
+.school-name p {
+    font-size: 13px;
+    color: #777;
+}
+
+
 /* ==================================================
    NAVIGATION
-================================================== */ 
- 
-.navbar { 
-    display: flex; 
-    align-items: center; 
-    gap: 28px; 
-} 
+================================================== */
 
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
 
 /* Main navigation tabs */
 
 .navbar > a,
 .dropdown > .dropbtn {
-    color: #333; 
-    font-size: 14px; 
-    font-weight: 500; 
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
 
     display: inline-block;
 
@@ -124,85 +122,80 @@ a {
 .navbar > a:hover,
 .dropdown > .dropbtn:hover {
     color: #123c69;
-
-    transform: scale(1.40);
-
+    transform: scale(1.15);
     font-weight: 600;
-
     text-shadow: 0 2px 8px rgba(18, 60, 105, 0.25);
 }
 
 
 /* Active tab */
 
-.navbar a.active { 
-    color: #123c69; 
-} 
- 
- 
-/* ================================================== 
-   EVENTS DROPDOWN 
-================================================== */ 
- 
-.dropdown { 
-    position: relative; 
-} 
- 
-.dropdown .dropbtn { 
-    cursor: pointer;
+.navbar a.active {
+    color: #123c69;
+}
 
-    /* Important for Events hover animation */
+
+/* ==================================================
+   DROPDOWNS
+================================================== */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
     display: inline-block;
     transition: all 0.25s ease;
-} 
- 
- 
-/* Dropdown menu */ 
- 
-.dropdown-content { 
-    display: none; 
- 
-    position: absolute; 
- 
-    top: 100%; 
-    left: 0; 
- 
-    min-width: 200px; 
- 
-    background: white; 
- 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
- 
-    border-radius: 6px; 
- 
-    padding: 8px 0; 
- 
-    z-index: 2000; 
-} 
- 
- 
-/* Dropdown links */ 
- 
-.dropdown-content a { 
-    display: block; 
- 
-    padding: 11px 18px; 
- 
-    color: #333 !important; 
- 
-    font-size: 14px; 
- 
-    white-space: nowrap; 
- 
-    transition: 0.3s; 
-} 
- 
- 
-/* Dropdown items hover */ 
- 
-.dropdown-content a:hover { 
-    background: #f7f9fc; 
- 
+}
+
+
+/* Dropdown menu */
+
+.dropdown-content {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 200px;
+
+    background: white;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    border-radius: 6px;
+
+    padding: 8px 0;
+
+    z-index: 2000;
+}
+
+
+/* Dropdown links */
+
+.dropdown-content a {
+    display: block;
+
+    padding: 11px 18px;
+
+    color: #333 !important;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+
+/* Dropdown items hover */
+
+.dropdown-content a:hover {
+    background: #f7f9fc;
+
     color: #123c69 !important;
 
     transform: scale(1.05);
@@ -210,339 +203,351 @@ a {
     font-weight: 600;
 
     text-shadow: 0 2px 6px rgba(18, 60, 105, 0.20);
-} 
- 
- 
-/* Show dropdown */ 
- 
-.dropdown:hover .dropdown-content { 
-    display: block; 
-} 
- 
- 
-/* ==================================================
-   EVENTS TAB HOVER
-================================================== */
+}
 
-/* This focuses the Events tab itself */
+
+/* Show dropdown */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Events / Others tab hover */
 
 .dropdown:hover > .dropbtn {
     color: #123c69;
 
-    transform: scale(1.30);
+    transform: scale(1.15);
 
     font-weight: 600;
 
     text-shadow: 0 2px 8px rgba(18, 60, 105, 0.25);
 }
- 
- 
-/* ================================================== 
-   ADMISSION BUTTON 
-================================================== */ 
- 
-.admission-btn { 
-    background: #f39c12 !important; 
- 
-    color: white !important; 
- 
-    padding: 11px 20px; 
- 
-    border-radius: 25px; 
- 
-    font-weight: 600 !important; 
-} 
- 
-.admission-btn:hover { 
+
+
+/* ==================================================
+   ADMISSION BUTTON
+================================================== */
+
+.admission-btn {
+    background: #f39c12 !important;
+
+    color: white !important;
+
+    padding: 11px 20px;
+
+    border-radius: 25px;
+
+    font-weight: 600 !important;
+
+    transition: 0.3s ease;
+}
+
+.admission-btn:hover {
     background: #d98200 !important;
 
-    transform: scale(1.30);
+    transform: scale(1.08);
 
     text-shadow: none;
-} 
- 
- 
-/* ================================================== 
-   HERO / HOME 
-================================================== */ 
- 
-.hero { 
-    min-height: 620px; 
- 
-    display: flex; 
-    align-items: center; 
- 
-    padding: 80px 8%; 
- 
-    background: 
-        linear-gradient( 
-            90deg, 
-            rgba(18, 60, 105, 0.97), 
-            rgba(18, 60, 105, 0.82), 
-            rgba(18, 60, 105, 0.45) 
-        ), 
-        url("images/school.jpg"); 
- 
-    background-size: cover; 
- 
-    background-position: center; 
-} 
- 
-.hero-content { 
-    max-width: 700px; 
- 
-    color: white; 
-} 
- 
-.welcome-text { 
-    font-size: 16px; 
- 
-    font-weight: 600; 
- 
-    letter-spacing: 3px; 
- 
-    color: #f5b942; 
- 
-    margin-bottom: 15px; 
-} 
- 
-.hero h1 { 
-    font-size: 52px; 
- 
-    line-height: 1.15; 
- 
-    margin-bottom: 5px; 
-} 
- 
-.hero h2 { 
-    font-size: 32px; 
- 
-    margin-bottom: 20px; 
- 
-    color: #f5b942; 
-} 
- 
-.hero-description { 
-    max-width: 600px; 
- 
-    font-size: 17px; 
- 
-    margin-bottom: 30px; 
- 
-    color: #f0f0f0; 
-} 
- 
- 
-/* Hero Buttons */ 
- 
-.hero-buttons { 
-    display: flex; 
- 
-    gap: 15px; 
-} 
- 
-.primary-btn, 
-.secondary-btn { 
-    padding: 13px 25px; 
- 
-    border-radius: 5px; 
- 
-    font-weight: 600; 
- 
-    transition: 0.3s; 
-} 
- 
-.primary-btn { 
-    background: #f39c12; 
- 
-    color: white; 
-} 
- 
-.primary-btn:hover { 
-    background: #d98200; 
-} 
- 
-.secondary-btn { 
-    border: 2px solid white; 
- 
-    color: white; 
-} 
- 
-.secondary-btn:hover { 
-    background: white; 
- 
-    color: #123c69; 
-} 
- 
- 
-/* ================================================== 
-   SECTION TITLE 
-================================================== */ 
- 
-.section-title { 
-    text-align: center; 
- 
-    max-width: 700px; 
- 
-    margin: 0 auto 50px; 
-} 
- 
-.section-title p { 
-    color: #f39c12; 
- 
-    font-size: 14px; 
- 
-    font-weight: 600; 
- 
-    letter-spacing: 2px; 
-} 
- 
-.section-title h2 { 
-    font-size: 32px; 
- 
-    color: #123c69; 
- 
-    margin-top: 8px; 
-} 
- 
- 
-/* ================================================== 
-   ABOUT 
-================================================== */ 
- 
-.about-section { 
-    padding: 90px 8%; 
- 
-    background: white; 
-} 
- 
-.about-content { 
-    display: grid; 
- 
-    grid-template-columns: 2fr 1fr 1fr; 
- 
-    gap: 25px; 
- 
-    max-width: 1200px; 
- 
-    margin: auto; 
-} 
- 
-.about-text { 
-    padding: 20px; 
-} 
- 
-.about-text h3 { 
-    font-size: 25px; 
- 
-    color: #123c69; 
- 
-    margin-bottom: 15px; 
-} 
- 
-.about-text p { 
-    color: #666; 
- 
-    margin-bottom: 15px; 
-} 
- 
-.about-card { 
-    padding: 35px 25px; 
- 
-    background: #f7f9fc; 
- 
-    border-radius: 10px; 
- 
-    text-align: center; 
- 
-    transition: 0.3s; 
-} 
- 
-.about-card:hover { 
-    transform: translateY(-8px); 
- 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); 
-} 
- 
-.card-icon { 
-    font-size: 40px; 
- 
-    margin-bottom: 15px; 
-} 
- 
-.about-card h3 { 
-    color: #123c69; 
- 
-    margin-bottom: 10px; 
-} 
- 
-.about-card p { 
-    color: #666; 
- 
-    font-size: 14px; 
-} 
- 
- 
-/* ================================================== 
-   ACADEMICS 
-================================================== */ 
- 
-.content-section { 
-    padding: 90px 8%; 
- 
-    background: white; 
-} 
- 
-.content-container { 
-    max-width: 1200px; 
- 
-    margin: auto; 
- 
-    display: grid; 
- 
-    grid-template-columns: repeat(3, 1fr); 
- 
-    gap: 25px; 
-} 
- 
-.content-box { 
-    background: #f7f9fc; 
- 
-    padding: 40px 30px; 
- 
-    text-align: center; 
- 
-    border-radius: 10px; 
- 
-    transition: 0.3s; 
-} 
- 
-.content-box:hover { 
-    transform: translateY(-8px); 
- 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); 
-} 
- 
-.content-box h3 { 
-    color: #123c69; 
- 
-    margin: 15px 0; 
-} 
- 
-.content-box p { 
-    color: #666; 
- 
-    font-size: 14px; 
-} 
+}
+
+
+/* ==================================================
+   HERO / HOME
+================================================== */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(18, 60, 105, 0.97),
+            rgba(18, 60, 105, 0.82),
+            rgba(18, 60, 105, 0.45)
+        ),
+        url("images/school.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 700px;
+
+    color: white;
+}
+
+.welcome-text {
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #f5b942;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 52px;
+
+    line-height: 1.15;
+
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+
+    color: #f5b942;
+}
+
+.hero-description {
+    max-width: 600px;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+
+    color: #f0f0f0;
+}
+
+
+/* Hero Buttons */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 13px 25px;
+
+    border-radius: 5px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #f39c12;
+
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #d98200;
+}
+
+.secondary-btn {
+    border: 2px solid white;
+
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: white;
+
+    color: #123c69;
+}
+
+
+/* ==================================================
+   SECTION TITLE
+================================================== */
+
+.section-title {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+}
+
+.section-title p {
+    color: #f39c12;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+
+    color: #123c69;
+
+    margin-top: 8px;
+}
+
+
+/* ==================================================
+   ABOUT
+================================================== */
+
+.about-section {
+    padding: 90px 8%;
+
+    background: white;
+}
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.about-text {
+    padding: 20px;
+}
+
+.about-text h3 {
+    font-size: 25px;
+
+    color: #123c69;
+
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+.about-card {
+    padding: 35px 25px;
+
+    background: #f7f9fc;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.about-card h3 {
+    color: #123c69;
+
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: #666;
+
+    font-size: 14px;
+}
+
+.about-card ul {
+    margin-top: 12px;
+    padding-left: 20px;
+    text-align: left;
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   ACADEMICS
+================================================== */
+
+.content-section {
+    padding: 90px 8%;
+
+    background: white;
+}
+
+.content-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.content-box {
+    background: #f7f9fc;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.content-box:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.content-box h3 {
+    color: #123c69;
+
+    margin: 15px 0;
+}
+
+.content-box p {
+    color: #666;
+
+    font-size: 14px;
+}
+
+
 /* ==================================================
    COMMITTEES PDF TABS
 ================================================== */
 
 .committee-tabs {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     column-gap: 8px;
+
     row-gap: 15px;
+
     margin-top: 15px;
 }
 
@@ -552,280 +557,370 @@ a {
     padding: 8px 15px;
 
     background: #123c69;
+
     color: white;
 
     border-radius: 5px;
 
     font-family: 'Poppins', sans-serif;
+
     font-size: 13px;
+
     font-weight: 500;
 
     text-decoration: none;
+
     transition: 0.3s;
 }
 
 .committee-tabs a:hover {
     background: #f39c12;
+
     color: white;
 }
+
 
 /* ==================================================
-   SUBJECT INFORMATION PDF BUTTON
+   SUBJECT / EXAM PDF BUTTONS
 ================================================== */
 
-.subject-pdf-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 15px;
-
-    background: #123c69;
-    color: white;
-
-    border-radius: 5px;
-
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.subject-pdf-btn:hover {
-    background: #f39c12;
-    color: white;
-}
-
-/* ==================================================
-   EXAM SCHEDULE PDF BUTTON
-================================================== */
-
+.subject-pdf-btn,
 .exam-schedule-btn {
     display: inline-block;
+
     margin-top: 15px;
+
     padding: 8px 15px;
 
     background: #123c69;
+
     color: white;
 
     border-radius: 5px;
 
     font-family: 'Poppins', sans-serif;
+
     font-size: 13px;
+
     font-weight: 500;
 
     text-decoration: none;
+
     transition: 0.3s;
 }
 
+.subject-pdf-btn:hover,
 .exam-schedule-btn:hover {
     background: #f39c12;
+
     color: white;
 }
-/* ================================================== 
-   FACILITIES 
-================================================== */ 
- 
-.features { 
-    padding: 90px 8%; 
- 
-    background: #f7f9fc; 
-} 
- 
-.feature-container { 
-    max-width: 1200px; 
- 
-    margin: auto; 
- 
-    display: grid; 
- 
-    grid-template-columns: repeat(4, 1fr); 
- 
-    gap: 20px; 
-} 
- 
-.feature-box { 
-    background: white; 
- 
-    padding: 35px 25px; 
- 
-    text-align: center; 
- 
-    border-radius: 10px; 
- 
-    transition: 0.3s; 
-} 
- 
-.feature-box:hover { 
-    transform: translateY(-8px); 
- 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); 
-} 
- 
-.feature-icon { 
-    font-size: 38px; 
- 
-    margin-bottom: 15px; 
-} 
- 
-.feature-box h3 { 
-    color: #123c69; 
- 
-    margin-bottom: 10px; 
-} 
- 
-.feature-box p { 
-    color: #666; 
- 
-    font-size: 14px; 
-} 
- 
- 
-/* ================================================== 
-   GALLERY 
-================================================== */ 
- 
-.gallery-section { 
-    padding: 90px 8%; 
- 
-    background: white; 
-} 
- 
-.gallery-container { 
-    max-width: 1200px; 
- 
-    margin: auto; 
- 
-    display: grid; 
- 
-    grid-template-columns: repeat(4, 1fr); 
- 
-    gap: 20px; 
-} 
- 
-.gallery-card { 
-    background: #f7f9fc; 
- 
-    border-radius: 10px; 
- 
-    overflow: hidden; 
- 
-    transition: 0.3s; 
-} 
- 
-.gallery-card:hover { 
-    transform: translateY(-8px); 
- 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); 
-} 
- 
-.gallery-card img { 
-    width: 100%; 
- 
-    height: 220px; 
- 
-    object-fit: cover; 
- 
-    display: block; 
-} 
- 
-.gallery-card h3 { 
-    color: #123c69; 
- 
-    font-size: 16px; 
- 
-    padding: 15px; 
- 
-    text-align: center; 
-} 
- /* ==================================================
-   MANDATORY DISCLOSURE SECTION
+
+
+/* ==================================================
+   FACILITIES
 ================================================== */
 
-.mandatory-disclosure-section {
-    padding: 80px 8%;
-    background: #f8f9fc;
+.features {
+    padding: 90px 8%;
+
+    background: #f7f9fc;
 }
 
-.mandatory-disclosure-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
+.feature-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
 }
 
-.mandatory-disclosure-card {
-    width: 100%;
-    max-width: 650px;
-    background: #ffffff;
-    padding: 40px;
+.feature-box {
+    background: white;
+
+    padding: 35px 25px;
+
     text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    border-radius: 10px;
+
+    transition: 0.3s;
 }
 
-.mandatory-disclosure-card h3 {
-    margin: 15px 0;
-    font-size: 24px;
+.feature-box:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-.mandatory-disclosure-card p {
-    margin-bottom: 25px;
+.feature-icon {
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+.feature-box h3 {
+    color: #123c69;
+
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   GALLERY
+================================================== */
+
+.gallery-section {
+    padding: 90px 8%;
+
+    background: white;
+}
+
+.gallery-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.gallery-card {
+    background: #f7f9fc;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.gallery-card h3 {
+    color: #123c69;
+
+    font-size: 16px;
+
+    padding: 15px;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   EXTRA CURRICULAR & ACTIVITIES
+================================================== */
+
+.event-section {
+    padding: 90px 8%;
+
+    background: #f7f9fc;
+}
+
+.activities-section {
+    background: white;
+}
+
+.event-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.event-card {
+    background: white;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.activities-section .event-card {
+    background: #f7f9fc;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.event-icon {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    color: #123c69;
+
+    margin-bottom: 12px;
+}
+
+.event-card p {
+    color: #666;
+
+    font-size: 14px;
+
     line-height: 1.7;
 }
+
+
 /* ==================================================
    MANDATORY DISCLOSURE
 ================================================== */
 
 .mandatory-disclosure-section {
     padding: 80px 6%;
+
     background: #f8f9fc;
+}
+
+.mandatory-disclosure-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 40px;
+}
+
+.mandatory-disclosure-card {
+    width: 100%;
+
+    max-width: 650px;
+
+    background: #ffffff;
+
+    padding: 40px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.mandatory-disclosure-card h3 {
+    margin: 15px 0;
+
+    font-size: 24px;
+
+    color: #123c69;
+}
+
+.mandatory-disclosure-card p {
+    margin-bottom: 25px;
+
+    line-height: 1.7;
+
+    color: #666;
 }
 
 .mandatory-disclosure-content {
     max-width: 1200px;
+
     margin: 40px auto;
 }
 
 .disclosure-block {
     background: #ffffff;
+
     padding: 30px;
+
     margin-bottom: 35px;
+
     border-radius: 15px;
+
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .disclosure-block h3 {
     margin-bottom: 20px;
+
     font-size: 24px;
+
+    color: #123c69;
 }
 
 .disclosure-table-wrapper {
     width: 100%;
+
     overflow-x: auto;
 }
 
 .disclosure-table {
     width: 100%;
+
     border-collapse: collapse;
 }
 
 .disclosure-table th,
 .disclosure-table td {
     border: 1px solid #ddd;
+
     padding: 15px;
+
     text-align: left;
+
     vertical-align: top;
+
     line-height: 1.5;
 }
 
 .disclosure-table th {
     font-weight: 600;
+
+    background: #123c69;
+
+    color: white;
 }
 
 .disclosure-table th:first-child,
 .disclosure-table td:first-child {
     width: 80px;
+
     text-align: center;
 }
 
@@ -841,445 +936,739 @@ a {
 
 .disclosure-table a {
     text-decoration: none;
+
     font-weight: 600;
+
+    color: #123c69;
 }
 
 .disclosure-table a:hover {
     text-decoration: underline;
+
+    color: #f39c12;
 }
- /* ==================================================
-   MANDATORY DISCLOSURE PDF BUTTON
-================================================== */
 
 .view-pdf-btn {
     display: inline-block;
+
     padding: 8px 22px;
+
     border-radius: 6px;
+
     text-decoration: none;
+
     font-weight: 600;
+
+    background: #123c69;
+
+    color: white !important;
+
     transition: 0.3s ease;
 }
 
 .view-pdf-btn:hover {
+    background: #f39c12;
+
+    color: white !important;
+
     transform: translateY(-2px);
 }
-/* ================================================== 
-   EXTRA CURRICULAR & ACTIVITIES 
-================================================== */ 
- 
-.event-section { 
-    padding: 90px 8%; 
- 
-    background: #f7f9fc; 
-} 
- 
-.activities-section { 
-    background: white; 
-} 
- 
-.event-container { 
-    max-width: 1200px; 
- 
-    margin: auto; 
- 
-    display: grid; 
- 
-    grid-template-columns: repeat(4, 1fr); 
- 
-    gap: 20px; 
-} 
- 
-.event-card { 
-    background: white; 
- 
-    padding: 35px 25px; 
- 
-    text-align: center; 
- 
-    border-radius: 10px; 
- 
-    transition: 0.3s; 
- 
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05); 
-} 
- 
-.activities-section .event-card { 
-    background: #f7f9fc; 
-} 
- 
-.event-card:hover { 
-    transform: translateY(-8px); 
- 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); 
-} 
- 
-.event-icon { 
-    font-size: 42px; 
- 
-    margin-bottom: 15px; 
-} 
- 
-.event-card h3 { 
-    color: #123c69; 
- 
-    margin-bottom: 12px; 
-} 
- 
-.event-card p { 
-    color: #666; 
- 
-    font-size: 14px; 
- 
-    line-height: 1.7; 
-} 
- 
- 
-/* ================================================== 
-   CONTACT 
-================================================== */ 
- 
-.contact-section { 
-    padding: 90px 8%; 
- 
-    background: #f7f9fc; 
-} 
- 
-.contact-container { 
-    max-width: 1000px; 
- 
-    margin: auto; 
- 
-    display: grid; 
- 
-    grid-template-columns: 1fr 1fr; 
- 
-    gap: 40px; 
-} 
- 
-.contact-info, 
-.contact-form { 
-    background: white; 
- 
-    padding: 35px; 
- 
-    border-radius: 10px; 
-} 
- 
-.contact-info h3, 
-.contact-form h3 { 
-    color: #123c69; 
- 
-    margin-bottom: 25px; 
-} 
- 
-.contact-info p { 
-    color: #666; 
- 
-    margin-bottom: 15px; 
-} 
- 
- 
-/* Contact Form */ 
- 
-.contact-form form { 
-    display: flex; 
- 
-    flex-direction: column; 
- 
-    gap: 15px; 
-} 
- 
-.contact-form input, 
-.contact-form textarea { 
-    width: 100%; 
- 
-    padding: 13px 15px; 
- 
-    border: 1px solid #ddd; 
- 
-    border-radius: 5px; 
- 
-    font-family: 'Poppins', sans-serif; 
- 
-    outline: none; 
-} 
- 
-.contact-form input:focus, 
-.contact-form textarea:focus { 
-    border-color: #123c69; 
-} 
- 
-.contact-form button { 
-    border: none; 
- 
-    background: #123c69; 
- 
-    color: white; 
- 
-    padding: 13px; 
- 
-    border-radius: 5px; 
- 
-    font-family: 'Poppins', sans-serif; 
- 
-    font-weight: 600; 
- 
-    cursor: pointer; 
- 
-    transition: 0.3s; 
-} 
- 
-.contact-form button:hover { 
-    background: #f39c12; 
-} 
- 
- 
-/* ================================================== 
-   ADMISSION 
-================================================== */ 
- 
-.admission-section { 
-    background: #123c69; 
- 
-    color: white; 
- 
-    padding: 60px 8%; 
- 
-    display: flex; 
- 
-    justify-content: space-between; 
- 
-    align-items: center; 
- 
-    gap: 30px; 
-} 
- 
-.admission-section p { 
-    color: #f5b942; 
- 
-    font-size: 13px; 
- 
-    font-weight: 600; 
- 
-    letter-spacing: 2px; 
-} 
- 
-.admission-section h2 { 
-    font-size: 35px; 
- 
-    margin: 5px 0; 
-} 
- 
-.admission-section span { 
-    color: #dce5ef; 
-} 
- 
-.admission-white-btn { 
-    background: white; 
- 
-    color: #123c69; 
- 
-    padding: 13px 25px; 
- 
-    border-radius: 5px; 
- 
-    font-weight: 600; 
- 
-    white-space: nowrap; 
-} 
- 
-.admission-white-btn:hover { 
-    background: #f39c12; 
- 
-    color: white; 
-} 
- 
- 
-/* ================================================== 
-   FOOTER 
-================================================== */ 
- 
-footer { 
-    background: #0c2947; 
- 
-    color: white; 
- 
-    padding-top: 55px; 
-} 
- 
-.footer-content { 
-    max-width: 1200px; 
- 
-    margin: auto; 
- 
-    padding: 0 8% 40px; 
- 
-    display: grid; 
- 
-    grid-template-columns: 2fr 1fr 1fr; 
- 
-    gap: 50px; 
-} 
- 
-.footer-content h3 { 
-    margin-bottom: 15px; 
- 
-    color: #f5b942; 
-} 
- 
-.footer-content p { 
-    color: #c7d2df; 
- 
-    font-size: 14px; 
- 
-    margin-bottom: 8px; 
-} 
- 
-.footer-content a { 
-    display: block; 
- 
-    color: #c7d2df; 
- 
-    font-size: 14px; 
- 
-    margin-bottom: 8px; 
- 
-    transition: 0.3s; 
-} 
- 
-.footer-content a:hover { 
-    color: white; 
-} 
- 
-.copyright { 
-    text-align: center; 
- 
-    border-top: 1px solid rgba(255, 255, 255, 0.1); 
- 
-    padding: 20px; 
- 
-    color: #aebdcc; 
- 
-    font-size: 13px; 
-} 
- 
- 
-/* ================================================== 
-   RESPONSIVE DESIGN 
-================================================== */ 
- 
-@media (max-width: 1100px) { 
- 
-    .navbar { 
-        gap: 15px; 
-    } 
- 
-    .feature-container, 
-    .gallery-container, 
-    .event-container { 
-        grid-template-columns: repeat(2, 1fr); 
-    } 
- 
-    .about-content { 
-        grid-template-columns: 1fr 1fr; 
-    } 
- 
-} 
- 
- 
-@media (max-width: 800px) { 
- 
-    .header { 
-        height: auto; 
- 
-        padding: 15px 5%; 
- 
-        flex-direction: column; 
- 
-        gap: 15px; 
-    } 
- 
-    .navbar { 
-        flex-wrap: wrap; 
- 
-        justify-content: center; 
- 
-        gap: 12px; 
-    } 
- 
-    .hero { 
-        min-height: 550px; 
- 
-        padding: 60px 7%; 
-    } 
- 
-    .hero h1 { 
-        font-size: 38px; 
-    } 
- 
-    .hero h2 { 
-        font-size: 26px; 
-    } 
- 
-    .about-content, 
-    .content-container, 
-    .contact-container { 
-        grid-template-columns: 1fr; 
-    } 
- 
-    .feature-container, 
-    .gallery-container, 
-    .event-container { 
-        grid-template-columns: 1fr 1fr; 
-    } 
- 
-    .admission-section { 
-        flex-direction: column; 
- 
-        text-align: center; 
-    } 
- 
-    .footer-content { 
-        grid-template-columns: 1fr; 
-    } 
- 
-    /* Mobile dropdown */ 
- 
-    .dropdown-content { 
-        left: 50%; 
- 
-        transform: translateX(-50%); 
-    } 
- 
-} 
- 
- 
-@media (max-width: 550px) { 
- 
-    .feature-container, 
-    .gallery-container, 
-    .event-container { 
-        grid-template-columns: 1fr; 
-    } 
- 
-    .hero-buttons { 
-        flex-direction: column; 
- 
-        max-width: 220px; 
-    } 
- 
-    .hero h1 { 
-        font-size: 32px; 
-    } 
- 
-    .section-title h2 { 
-        font-size: 26px; 
-    } 
- 
-    .dropdown-content { 
-        position: absolute; 
- 
-        min-width: 180px; 
-    } 
- 
+
+.disclosure-note {
+    max-width: 1200px;
+
+    margin: 20px auto 0;
+
+    padding: 20px;
+
+    background: #fff3cd;
+
+    border-left: 5px solid #f39c12;
+
+    border-radius: 6px;
+
+    color: #555;
+
+    line-height: 1.6;
+}
+
+
+/* ==================================================
+   CONTACT
+================================================== */
+
+.contact-section {
+    padding: 90px 8%;
+
+    background: #f7f9fc;
+}
+
+.contact-container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+}
+
+.contact-info,
+.contact-form {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 10px;
+}
+
+.contact-info h3,
+.contact-form h3 {
+    color: #123c69;
+
+    margin-bottom: 25px;
+}
+
+.contact-info p {
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+
+/* Contact Form */
+
+.contact-form form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+
+    font-family: 'Poppins', sans-serif;
+
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #123c69;
+}
+
+.contact-form button {
+    border: none;
+
+    background: #123c69;
+
+    color: white;
+
+    padding: 13px;
+
+    border-radius: 5px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #f39c12;
+}
+
+
+/* ==================================================
+   ADMISSION
+================================================== */
+
+.admission-section {
+    background: #123c69;
+
+    color: white;
+
+    padding: 60px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.admission-section p {
+    color: #f5b942;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.admission-section h2 {
+    font-size: 35px;
+
+    margin: 5px 0;
+}
+
+.admission-section span {
+    color: #dce5ef;
+}
+
+.admission-white-btn {
+    background: white;
+
+    color: #123c69;
+
+    padding: 13px 25px;
+
+    border-radius: 5px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.admission-white-btn:hover {
+    background: #f39c12;
+
+    color: white;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+    background: #0c2947;
+
+    color: white;
+
+    padding-top: 55px;
+}
+
+.footer-content {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 0 8% 40px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+.footer-content h3 {
+    margin-bottom: 15px;
+
+    color: #f5b942;
+}
+
+.footer-content p {
+    color: #c7d2df;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+.footer-content a {
+    display: block;
+
+    color: #c7d2df;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+
+    transition: 0.3s;
+}
+
+.footer-content a:hover {
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    padding: 20px;
+
+    color: #aebdcc;
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   RESPONSIVE DESIGN
+================================================== */
+
+@media (max-width: 1200px) {
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .content-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-container,
+    .gallery-container,
+    .event-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .header {
+        height: auto;
+
+        padding: 15px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+    .navbar > a:hover,
+    .dropdown > .dropbtn:hover,
+    .dropdown:hover > .dropbtn {
+        transform: none;
+    }
+
+    .hero {
+        min-height: 550px;
+
+        padding: 60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .about-content,
+    .content-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-container,
+    .gallery-container,
+    .event-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .admission-section {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mobile dropdown */
+
+    .dropdown-content {
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .header {
+        padding: 15px 4%;
+    }
+
+    .school-name h2 {
+        font-size: 16px;
+    }
+
+    .navbar {
+        gap: 10px;
+    }
+
+    .navbar > a,
+    .dropdown > .dropbtn {
+        font-size: 13px;
+    }
+
+    .feature-container,
+    .gallery-container,
+    .event-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        max-width: 220px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .committee-tabs {
+        grid-template-columns: 1fr;
+    }
+
+    .mandatory-disclosure-card {
+        padding: 25px 20px;
+    }
+
+    .disclosure-block {
+        padding: 20px 15px;
+    }
+
+    .disclosure-table th,
+    .disclosure-table td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .dropdown-content {
+        position: absolute;
+
+        min-width: 180px;
+    }
+
+}
+/* ==================================================
+   PRINCIPAL DESK SECTION
+================================================== */
+
+.principal-desk-section {
+    padding: 90px 8%;
+    background: #f8f9fc;
+}
+
+
+/* Main container */
+
+.principal-desk-container {
+    max-width: 1200px;
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: 300px 1fr;
+
+    gap: 50px;
+
+    align-items: start;
+}
+
+
+/* ==================================================
+   PRINCIPAL PROFILE
+================================================== */
+
+.principal-profile {
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+    top: 100px;
+}
+
+
+/* Principal image */
+
+.principal-image-placeholder {
+    width: 150px;
+    height: 150px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    background: #eef1f7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 65px;
+
+    border: 5px solid #ffffff;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+.principal-profile h3 {
+    margin: 10px 0 5px;
+
+    font-size: 22px;
+
+    color: #243b55;
+}
+
+
+.principal-profile p {
+    margin: 0 0 12px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #8b2c2c;
+}
+
+
+.principal-profile span {
+    display: block;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #666;
+}
+
+
+/* ==================================================
+   PRINCIPAL MESSAGE
+================================================== */
+
+.principal-message {
+    background: #ffffff;
+
+    padding: 45px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.principal-message h3 {
+    margin-top: 0;
+
+    margin-bottom: 25px;
+
+    font-size: 28px;
+
+    color: #243b55;
+}
+
+
+.principal-message p {
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    color: #555;
+
+    margin-bottom: 20px;
+
+    text-align: justify;
+}
+
+
+/* ==================================================
+   PRINCIPAL QUOTE
+================================================== */
+
+.principal-message blockquote {
+    margin: 0 0 30px;
+
+    padding: 22px 30px;
+
+    border-left: 5px solid #8b2c2c;
+
+    background: #f8f1f1;
+
+    border-radius: 8px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    font-style: italic;
+
+    color: #6d2525;
+}
+
+
+/* ==================================================
+   PRINCIPAL WISHES
+================================================== */
+
+.principal-wishes {
+    text-align: center !important;
+
+    font-size: 19px !important;
+
+    font-weight: 600;
+
+    font-style: italic;
+
+    color: #8b2c2c !important;
+
+    margin-top: 35px;
+}
+
+
+/* ==================================================
+   PRINCIPAL SIGNATURE
+================================================== */
+
+.principal-signature {
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #ddd;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.principal-signature strong {
+    font-size: 18px;
+
+    color: #243b55;
+}
+
+
+.principal-signature span {
+    font-size: 14px;
+
+    color: #666;
+}
+
+
+/* ==================================================
+   RESPONSIVE DESIGN
+================================================== */
+
+@media (max-width: 900px) {
+
+    .principal-desk-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .principal-profile {
+        position: static;
+
+        max-width: 400px;
+
+        margin: 0 auto;
+
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .principal-desk-section {
+        padding: 60px 5%;
+    }
+
+
+    .principal-message {
+        padding: 25px 20px;
+    }
+
+
+    .principal-message h3 {
+        font-size: 23px;
+    }
+
+
+    .principal-message p {
+        font-size: 15px;
+
+        line-height: 1.8;
+
+        text-align: left;
+    }
+
+
+    .principal-message blockquote {
+        padding: 18px 20px;
+
+        font-size: 16px;
+    }
+
+
+    .principal-image-placeholder {
+        width: 120px;
+        height: 120px;
+
+        font-size: 50px;
+    }
+
 }
